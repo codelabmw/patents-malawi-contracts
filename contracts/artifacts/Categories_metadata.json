@@ -19,6 +19,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "count",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -47,6 +60,73 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_offset",
+						"type": "uint256"
+					}
+				],
+				"name": "query",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Category[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "remove",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "update",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -78,27 +158,35 @@
 	},
 	"sources": {
 		"contracts/Categories.sol": {
-			"keccak256": "0x0da5d4552cb25e5d2275ae523873cf1fc32be4c0554cd8f9ab0dc10f69b37444",
+			"keccak256": "0xb01dc05c231f2dfe322984937aab4a03e95298ac35eb9cc517abd942c25376ec",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://858b05d182d4765aaae64b673297d9b44bee79cc5b3721df68c06bb78621eccc",
-				"dweb:/ipfs/QmPgtHKdn2voijeb495FFqK1FU1W4fXa1ETyitTJUdyaox"
+				"bzz-raw://663b06546ea7849d1ccd6c94a0afd87233f9c218f4c941731a4aa321edcf37bb",
+				"dweb:/ipfs/Qma3SeHFBvJT162RrRFrsieJSFtgupNZgejcL3ucqNzVGi"
 			]
 		},
-		"contracts/Ownerable.sol": {
-			"keccak256": "0xb02e27c290a9ec3ed74213f0b95de375bb97cb840a2aeb9603e30b720b642b2d",
+		"contracts/core/interfaces/Countable.sol": {
+			"keccak256": "0x63e69aa05af196d7b8aa0f1221f1348b997c4b59e6fafb2890603ec36bbfc058",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bb5de6e1feff58e2e24548343be882acb1e755001ee6d69545060acd1646cdc4",
-				"dweb:/ipfs/QmV8DWrqNtQGk9aZBnKLbMsJ5eunr4qQbb9X6Mf1msTJXw"
+				"bzz-raw://29b74a658ef57f3e8dadd1b0fdc3b58b09cb6238b8227e1adf0b919e3417b43c",
+				"dweb:/ipfs/QmSENHea45Zep8KSz6EstfWMc1xSJqqvqxuMGUWmFyauc6"
 			]
 		},
-		"contracts/Types.sol": {
-			"keccak256": "0xec6e4e8bcd861a339bfaee193f74c095b9c1e63e9e4eaf5c2b7da88da12c71a0",
+		"contracts/core/interfaces/Ownerable.sol": {
+			"keccak256": "0x7789a90a56d787a7d80370a4d7c1668a979b0d06016636518d0a0cc3dcd0c8c8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://775404a6e85b88ff9ce5b4d2e4b81e5b144c7951bba6ac8301dbb1834693c6fa",
-				"dweb:/ipfs/QmdApHGBf4vBqWBgZr9SnzWV2UvcV8zg5SuG6r1xSFkxjw"
+				"bzz-raw://a3fe0048ea9647ade7c550cec71c2f73f5f57ee36f144e0611c2452cf77de9cb",
+				"dweb:/ipfs/QmNZd5TtLF66KmHHoE7LSzBG5s5QooDXTdi8nPQ4CLJ4fD"
+			]
+		},
+		"contracts/core/models/Category.sol": {
+			"keccak256": "0xe026ac2a80e0ad65a30ca6efa984149bde58de768a95ba2d4b21d1822ecb2d5b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5b44a19927f68a9dc09172b12feebb86770a7c7b02a6b94da9f2f4815222364f",
+				"dweb:/ipfs/QmZM9DgubiyuQHKjVfoCx6DHimY42PYRprdQebAjAYtZR1"
 			]
 		}
 	},

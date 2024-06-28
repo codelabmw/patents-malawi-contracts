@@ -11,52 +11,160 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "categories",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "addCategory",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "addTag",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_offset",
+						"type": "uint256"
+					}
+				],
+				"name": "getCategories",
 				"outputs": [
 					{
-						"internalType": "contract Categories",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Category[]",
 						"name": "",
-						"type": "address"
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "pantents",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getCategory",
 				"outputs": [
 					{
-						"internalType": "contract Patents",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Category",
 						"name": "",
-						"type": "address"
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "profiles",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getTag",
 				"outputs": [
 					{
-						"internalType": "contract Profiles",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Tag",
 						"name": "",
-						"type": "address"
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "tags",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_offset",
+						"type": "uint256"
+					}
+				],
+				"name": "getTags",
 				"outputs": [
 					{
-						"internalType": "contract Tags",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Tag[]",
 						"name": "",
-						"type": "address"
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -70,7 +178,14 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"addCategory(string)": {
+					"notice": "Categories API"
+				},
+				"addTag(string)": {
+					"notice": "Tags API"
+				}
+			},
 			"version": 1
 		}
 	},
@@ -91,11 +206,11 @@
 	},
 	"sources": {
 		"contracts/Storage.sol": {
-			"keccak256": "0x17980e0f675d55dd7a50d751d7257e1959c5c811b2b50774690029cda53fd52c",
+			"keccak256": "0xf286e3f734b2f582238fb826ef13a3e498e04d3197349bc12752e116144e5c93",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bc0764f19754fc5df8362c1e4cdaeb6c6224f8a311d51f985c170e0505e320bb",
-				"dweb:/ipfs/QmQmB8kiW1izpYng2VhbrZA5mbUWdvxeUiGfU1GfrQoGCn"
+				"bzz-raw://1619a62d76ccafc54cbadc35fca16286dcb01c9487c9bdad02388205ea96a72a",
+				"dweb:/ipfs/QmUvFvTMdb4e1vB3aNNffpoJ6uNW1AaK9Vd6rDQJkYrR4f"
 			]
 		},
 		"contracts/core/interfaces/Countable.sol": {
@@ -123,11 +238,11 @@
 			]
 		},
 		"contracts/core/models/Patent.sol": {
-			"keccak256": "0x19f572c24779d996b3f671713043300f649662e10a9ec9722982bf83ce78cbae",
+			"keccak256": "0x52126549f97d2cfa86d3ad0b50806a9e21ff8423af0105d132fef98d54b69ec8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://634c44e856733a69ed3a896d26e419473cdd69dc24650ab9d874ed06e527b0b4",
-				"dweb:/ipfs/QmXJTLeKGm8CkYZoXBnrDMdvf4pZKiTpQjH6UoJdV42Qtu"
+				"bzz-raw://1da63fc571aa491d3066a6b5ef69760eb4c7df1ad1db55b88695204391f2df05",
+				"dweb:/ipfs/QmZzxbg1j7U42sr1v6B5mBh2mjnuYEdkqq8QaQUDCiw5U2"
 			]
 		},
 		"contracts/core/models/Profile.sol": {
@@ -147,19 +262,19 @@
 			]
 		},
 		"contracts/core/services/Categories.sol": {
-			"keccak256": "0x701e5db3c86180b32aab6c88220f9cfa6e26368fab582ca3142af0b5d4b12120",
+			"keccak256": "0x4686a86d1467591c04d263fef3f9d8a500a67bb582012eb36894e7a14177a2c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://040495de30d2d709cf094bd16ffcf597d96df25fab038bfe41c36ab46f503f4d",
-				"dweb:/ipfs/QmNg1UKyGCKha5K8G9xik893h1p2UYBgECrZbwAxmULXSi"
+				"bzz-raw://aec650538aac958db50a4c9aa91d657f27359b14857af18a728786e456c53553",
+				"dweb:/ipfs/QmPDKauquxc5YmZ9yNSLtA7LVyV2LtqVmHy6HBUPninesB"
 			]
 		},
 		"contracts/core/services/Patents.sol": {
-			"keccak256": "0x270dc599a2cfa50f907176924dc9f2afe1a92db51a131a954510bf536cfa7af7",
+			"keccak256": "0x8eb0a8b175ae31420a0ac4f0d4e205c0d3b66dabe28de1af50f322c774a3a4ce",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://06614f7f88db1fc1c00583810bfd7917304421436c9c42e54e7b185d60eed1d8",
-				"dweb:/ipfs/QmNU3jS7KQgu1sktawiPfrCPfxQwZqVUpmn6SR1Q5bWZuB"
+				"bzz-raw://090c4d4f8dd8902042b8ff03c6ede91d8ee7c7b6e5c80b4a8236282518560555",
+				"dweb:/ipfs/QmYwZAzSB4ppTzyT3FCT1NsZgJB1CX85w2wW5BkgiSYEHj"
 			]
 		},
 		"contracts/core/services/Profiles.sol": {
@@ -171,11 +286,11 @@
 			]
 		},
 		"contracts/core/services/Tags.sol": {
-			"keccak256": "0x0511cb1468055313edb1c93ee1d6eb98e633d5599b8f8344b0b2652a3ae24872",
+			"keccak256": "0x2a430d9119559ca519a1931e0c0447d4fa911708dfb5c9c8956efc0f128130f8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c49554f6041a0a19f128f07ca7f856ea2e3f22b5685fad1ea81211076e7eabfd",
-				"dweb:/ipfs/QmU9LNQmyyEEq9s59jy3hG9dTEcfGuNAQzBrrfcqmPXaq3"
+				"bzz-raw://0f644b7e05d20751f5bb3cae24b83a03fc187c9ea6322fb1dbbbaecdd870b6f7",
+				"dweb:/ipfs/QmeR1t6LeJMhe5LEnNmPcHqLcknpVSKChh6amdayxHmVE6"
 			]
 		}
 	},

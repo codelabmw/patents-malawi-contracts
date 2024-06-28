@@ -3,7 +3,7 @@ pragma solidity ^0.8.26;
 
 struct Patent {
     uint id;
-    bytes32 title;
+    string title;
     string summary;
     string body;
     uint created_at;
