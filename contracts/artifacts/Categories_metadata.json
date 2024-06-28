@@ -66,6 +66,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "remove",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "_limit",
 						"type": "uint256"
 					},
@@ -75,7 +88,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "query",
+				"name": "some",
 				"outputs": [
 					{
 						"components": [
@@ -96,19 +109,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_index",
-						"type": "uint256"
-					}
-				],
-				"name": "remove",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -158,11 +158,11 @@
 	},
 	"sources": {
 		"contracts/Categories.sol": {
-			"keccak256": "0xb01dc05c231f2dfe322984937aab4a03e95298ac35eb9cc517abd942c25376ec",
+			"keccak256": "0x5bc6a8dd301441f8298cc04d30495bd4bca2014dc4abfd87d6170631ed5c97d1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://663b06546ea7849d1ccd6c94a0afd87233f9c218f4c941731a4aa321edcf37bb",
-				"dweb:/ipfs/Qma3SeHFBvJT162RrRFrsieJSFtgupNZgejcL3ucqNzVGi"
+				"bzz-raw://76ebae2ece1ba88c98afa6269e685c6e849d43876821c7bb7b185a6ad59f97e4",
+				"dweb:/ipfs/QmXpuorkuFVN3f6TTLut2tyKXZBBZDCEPV1rTt5mSsh9Z7"
 			]
 		},
 		"contracts/core/interfaces/Countable.sol": {

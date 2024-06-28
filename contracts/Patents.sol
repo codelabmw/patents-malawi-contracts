@@ -5,14 +5,14 @@ import "contracts/core/interfaces/Countable.sol";
 import "contracts/core/models/Patent.sol";
 
 contract Patents is Countable {
-    mapping(uint => Patent) patents;
+    mapping(uint256 => Patent) patents;
 
     function add(
         string calldata _title,
         string calldata _summary,
         string calldata _body,
-        uint _category_id,
-        uint[] calldata _tags
+        uint256 _category_id,
+        uint256[] calldata _tags
     ) public {
         incrementCount();
         patents[_count] = Patent({
@@ -28,11 +28,11 @@ contract Patents is Countable {
         });
     }
 
-    function get(uint _index) public view returns (Patent memory) {
+    function get(uint256 _index) public view returns (Patent memory) {
         return patents[_index];
     }
 
-    function some(uint _limit, uint _offset)
+    function some(uint256 _limit, uint256 _offset)
         public
         view
         returns (Patent[] memory)
@@ -42,7 +42,7 @@ contract Patents is Countable {
 
         Patent[] memory _patents = new Patent[](_limit);
 
-        for (uint i; i < _limit; i++) {
+        for (uint256 i; i < _limit; i++) {
             _patents[i] = patents[i + _offset];
         }
 
@@ -50,12 +50,12 @@ contract Patents is Countable {
     }
 
     function update(
-        uint _index,
+        uint256 _index,
         string calldata _title,
         string calldata _summary,
         string calldata _body,
-        uint _category_id,
-        uint[] calldata _tags
+        uint256 _category_id,
+        uint256[] calldata _tags
     ) public {
         require(
             _index >= _count || _index <= _count,
@@ -72,7 +72,7 @@ contract Patents is Countable {
         patent.tags = _tags;
     }
 
-    function remove(uint _index) public {
+    function remove(uint256 _index) public {
         delete patents[_index];
         decrementCount();
     }
