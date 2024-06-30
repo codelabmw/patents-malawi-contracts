@@ -35,12 +35,43 @@
 				],
 				"name": "add",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
 				"name": "count",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "creationFee",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -118,6 +149,66 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "mine",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "summary",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "body",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "created_at",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "updated_at",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "tags",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "address",
+								"name": "author",
+								"type": "address"
+							}
+						],
+						"internalType": "struct Patent[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -128,6 +219,45 @@
 				"name": "remove",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "renew",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renewalFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "revenew",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -238,6 +368,45 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "updateCreationFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "updateRenewalFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -268,11 +437,11 @@
 	},
 	"sources": {
 		"contracts/Patents.sol": {
-			"keccak256": "0x1875225e816b8a0f9f9069b9cf95648caa8436af7397b76f29342b35334f3056",
+			"keccak256": "0x915b0180c15af66cd65aef80408e2601e0e4e6dc87fcc7d8fa61e9a213b2c177",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9fb08051118b548c2be7d885662eb706cb29b6bd535622508fd1f506149d6fe9",
-				"dweb:/ipfs/QmTVjYUNUAiT58yf97dSAVkMF9mtHfgVzGNaJSQHdjjcmK"
+				"bzz-raw://ae0fe20933364cb8755caaf2c147643d49b1c1ce1805f3b3aeeae9c32b942553",
+				"dweb:/ipfs/Qmc7ExHCQZ7XS8czpCiQu5oe65XmCsMubKhY9rgDbAWFHf"
 			]
 		},
 		"contracts/core/interfaces/Countable.sol": {
@@ -281,6 +450,14 @@
 			"urls": [
 				"bzz-raw://29b74a658ef57f3e8dadd1b0fdc3b58b09cb6238b8227e1adf0b919e3417b43c",
 				"dweb:/ipfs/QmSENHea45Zep8KSz6EstfWMc1xSJqqvqxuMGUWmFyauc6"
+			]
+		},
+		"contracts/core/interfaces/Ownerable.sol": {
+			"keccak256": "0x7789a90a56d787a7d80370a4d7c1668a979b0d06016636518d0a0cc3dcd0c8c8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a3fe0048ea9647ade7c550cec71c2f73f5f57ee36f144e0611c2452cf77de9cb",
+				"dweb:/ipfs/QmNZd5TtLF66KmHHoE7LSzBG5s5QooDXTdi8nPQ4CLJ4fD"
 			]
 		},
 		"contracts/core/models/Category.sol": {
