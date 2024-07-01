@@ -23,14 +23,19 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_category_id",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_category",
+						"type": "string"
 					},
 					{
-						"internalType": "uint256[]",
+						"internalType": "string[]",
 						"name": "_tags",
-						"type": "uint256[]"
+						"type": "string[]"
+					},
+					{
+						"internalType": "string",
+						"name": "_user",
+						"type": "string"
 					}
 				],
 				"name": "add",
@@ -125,14 +130,19 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "uint256",
-								"name": "category_id",
-								"type": "uint256"
+								"internalType": "string",
+								"name": "category",
+								"type": "string"
 							},
 							{
-								"internalType": "uint256[]",
+								"internalType": "string[]",
 								"name": "tags",
-								"type": "uint256[]"
+								"type": "string[]"
+							},
+							{
+								"internalType": "string",
+								"name": "user",
+								"type": "string"
 							},
 							{
 								"internalType": "address",
@@ -185,14 +195,19 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "uint256",
-								"name": "category_id",
-								"type": "uint256"
+								"internalType": "string",
+								"name": "category",
+								"type": "string"
 							},
 							{
-								"internalType": "uint256[]",
+								"internalType": "string[]",
 								"name": "tags",
-								"type": "uint256[]"
+								"type": "string[]"
+							},
+							{
+								"internalType": "string",
+								"name": "user",
+								"type": "string"
 							},
 							{
 								"internalType": "address",
@@ -308,14 +323,19 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "uint256",
-								"name": "category_id",
-								"type": "uint256"
+								"internalType": "string",
+								"name": "category",
+								"type": "string"
 							},
 							{
-								"internalType": "uint256[]",
+								"internalType": "string[]",
 								"name": "tags",
-								"type": "uint256[]"
+								"type": "string[]"
+							},
+							{
+								"internalType": "string",
+								"name": "user",
+								"type": "string"
 							},
 							{
 								"internalType": "address",
@@ -354,14 +374,14 @@
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_category_id",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_category",
+						"type": "string"
 					},
 					{
-						"internalType": "uint256[]",
+						"internalType": "string[]",
 						"name": "_tags",
-						"type": "uint256[]"
+						"type": "string[]"
 					}
 				],
 				"name": "update",
@@ -437,11 +457,11 @@
 	},
 	"sources": {
 		"contracts/Patents.sol": {
-			"keccak256": "0x915b0180c15af66cd65aef80408e2601e0e4e6dc87fcc7d8fa61e9a213b2c177",
+			"keccak256": "0x7b2aea24c3f55668170d40d3e093adebbd2710a9034b9994893e2dc9741fe15c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ae0fe20933364cb8755caaf2c147643d49b1c1ce1805f3b3aeeae9c32b942553",
-				"dweb:/ipfs/Qmc7ExHCQZ7XS8czpCiQu5oe65XmCsMubKhY9rgDbAWFHf"
+				"bzz-raw://a329ef14e29526eaa0669693fd6964a4b8e7166f53f5fc4b16556224aed05c6b",
+				"dweb:/ipfs/QmNY2kpRQP8HuHAnysFDifVjB2J8R4vtNf9quonmTvjr7v"
 			]
 		},
 		"contracts/core/interfaces/Countable.sol": {
@@ -469,11 +489,11 @@
 			]
 		},
 		"contracts/core/models/Patent.sol": {
-			"keccak256": "0xb9b11612e401ffb9bb39f8dc0331a78b96cb909c02fe277203b62b7bff8b78b3",
+			"keccak256": "0xf5a47785dca4e5fe8baa9d7810eb0fb61bd0e24004b7d108beab7d9d56561bc1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://df8fe59221817004394583cc075797d4e41b24100b2911704c259ba8ee381f17",
-				"dweb:/ipfs/QmaWM53i2EXQro6nHPLH2sgUs9xqVvqvfB7t7qe7RARhd1"
+				"bzz-raw://869037af9439da956a0dbfafe6a099969ae8559384b621cfd5701df036ca7ff3",
+				"dweb:/ipfs/QmTNJE5hxNBHw8m8eT5msEDWDF7Qz5vNuLhMjStkQnxkRx"
 			]
 		},
 		"contracts/core/models/Profile.sol": {

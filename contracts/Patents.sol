@@ -32,8 +32,9 @@ contract Patents is Countable, Ownerable {
         string calldata _title,
         string calldata _summary,
         string calldata _body,
-        uint256 _category_id,
-        uint256[] calldata _tags
+        string calldata _category,
+        string[] memory _tags,
+        string calldata _user
     ) public payable {
         require(msg.value == creationFee, "Incorrect creation fee.");
 
@@ -48,8 +49,9 @@ contract Patents is Countable, Ownerable {
             body: _body,
             created_at: block.timestamp,
             updated_at: block.timestamp,
-            category_id: _category_id,
+            category: _category,
             tags: _tags,
+            user: _user,
             author: msg.sender
         });
 
@@ -67,7 +69,7 @@ contract Patents is Countable, Ownerable {
 
         uint256 index = 0;
 
-        for (uint256 i; i < myPatentsCount; i++) {
+        for (uint256 i; i < _count; i++) {
             Patent memory patent = patents[i + 1];
 
             if (patent.author == msg.sender) {
@@ -101,8 +103,8 @@ contract Patents is Countable, Ownerable {
         string calldata _title,
         string calldata _summary,
         string calldata _body,
-        uint256 _category_id,
-        uint256[] calldata _tags
+        string calldata _category,
+        string[] memory _tags
     ) public {
         require(
             _index >= _count || _index <= _count,
@@ -116,7 +118,7 @@ contract Patents is Countable, Ownerable {
         patent.summary = _summary;
         patent.body = _body;
         patent.updated_at = block.timestamp;
-        patent.category_id = _category_id;
+        patent.category = _category;
         patent.tags = _tags;
     }
 
@@ -142,5 +144,6 @@ contract Patents is Countable, Ownerable {
         Patent memory patent = patents[_index];
         require(patent.author == msg.sender, "Action not authorized.");
         decrementCount();
+        userPatents[msg.sender] -= 1;
     }
 }

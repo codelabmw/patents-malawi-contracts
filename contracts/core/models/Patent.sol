@@ -11,8 +11,9 @@ struct Patent {
     string body;
     uint created_at;
     uint updated_at;
-    uint category_id;
-    uint[] tags; // array of Tag id's
+    string category;
+    string[] tags;
+    string user;
     address author;
 }
 
@@ -24,6 +25,6 @@ struct PatentResource {
     uint created_at;
     uint updated_at;
     Category category;
-    uint[] tags; // array of Tag id's
+    uint[] tags;
     Profile author;
 }
